@@ -1,6 +1,6 @@
 import React from "react";
-
 import styled from "styled-components";
+import { useCalcContext } from "../context/GlobalState";
 
 const Button = styled.button`
   padding: 1rem;
@@ -8,7 +8,8 @@ const Button = styled.button`
   font-size: 32px;
 `;
 
-export default function OperationButtons({ children, dispatch }) {
+export default function OperationButtons() {
+  const [state, dispatch] = useCalcContext();
   return (
     <div>
       <Button

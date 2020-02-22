@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { useCalcContext } from "../context/GlobalState";
+
 const Div = styled.div`
   font-size: 2rem;
   padding: 1rem;
@@ -17,11 +19,15 @@ const Operation = styled.span`
   left: 2px;
 `;
 
-export default function Display({ number, operation }) {
+export default function Display({ operation }) {
+  const [{ number, result }, dispatch] = useCalcContext();
   return (
-    <Div>
-      <Operation>{operation}</Operation>
-      <span>{number}</span>
-    </Div>
+    <div>
+      <Div>
+        <Operation>{operation}</Operation>
+        <span>{number}</span>
+      </Div>
+      <div>{result}</div>
+    </div>
   );
 }
