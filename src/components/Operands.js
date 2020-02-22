@@ -1,12 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { useCalcContext } from "../context/GlobalState";
-
-const Button = styled.button`
-  padding: 1rem;
-  border-radius: 5px;
-  font-size: 32px;
-`;
+import Button from "./Button";
 
 export default function OperationButtons() {
   const [state, dispatch] = useCalcContext();

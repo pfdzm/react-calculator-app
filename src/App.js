@@ -16,7 +16,6 @@ const Container = styled.div`
 
 const Header = styled.h1`
   color: #9673ff;
-
   &:hover {
     color: rebeccapurple;
   }

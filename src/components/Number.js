@@ -1,24 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { useCalcContext } from "../context/GlobalState";
+import Button from "./Button";
 
-const Button = styled.button`
-  font-size: 24px;
-  font-family: monospace;
-  font-weight: bold;
-  color: #9673ff;
-  border: 2px solid #9673ff;
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 5px;
-  background-color: unset;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-`;
-
-export const Number = ({ number }) => {
+export default function Number({ number }) {
   const [state, dispatch] = useCalcContext();
   return (
     <Button
@@ -33,4 +17,4 @@ export const Number = ({ number }) => {
       {number}
     </Button>
   );
-};
+}
