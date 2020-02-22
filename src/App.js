@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import styled from "styled-components";
 
-import { Number } from "./components/Number";
+import Number from "./components/Number";
 import Display from "./components/Display";
 import Operands from "./components/Operands";
 
